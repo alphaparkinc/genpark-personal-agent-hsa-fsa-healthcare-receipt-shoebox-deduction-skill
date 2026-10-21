@@ -1,0 +1,64 @@
+{
+  "name": "genpark-personal-agent-hsa-fsa-healthcare-receipt-shoebox-deduction-skill",
+  "version": "1.0.0",
+  "title": "HSA/FSA Healthcare Receipt Shoebox Deduction Auditor Skill",
+  "description": "HSA triple-tax-advantaged receipt shoebox archiver, IRC 213(d) qualified medical expense compliance auditor, and retroactive reimbursement scheduler. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "hsa-shoebox",
+    "fsa-reimbursement",
+    "qualified-medical-expenses",
+    "tax-optimization",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "audit_irc213d_expense_eligibility",
+      "description": "Verify whether healthcare expenditure qualifies under IRS Section 213(d) for tax-free HSA withdrawal.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "expense_description": {
+            "type": "string"
+          },
+          "amount_usd": {
+            "type": "number"
+          },
+          "has_physician_letter_of_medical_necessity": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "expense_description",
+          "amount_usd"
+        ]
+      }
+    },
+    {
+      "name": "simulate_hsa_shoebox_compound_growth",
+      "description": "Simulate compounded investment gains from deferring HSA reimbursement for 15-20 years.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "reimbursable_receipts_usd": {
+            "type": "number"
+          },
+          "compounding_years": {
+            "type": "integer"
+          },
+          "annual_roi_pct": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "reimbursable_receipts_usd",
+          "compounding_years"
+        ]
+      }
+    }
+  ]
+}
